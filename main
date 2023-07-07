@@ -1,0 +1,26 @@
+#This module will check your entries input type.
+#It will keep trying to assign an input type to the entry until its true.
+
+def input_type(input):
+
+    try:
+        #This will check if the type of this input is integer.
+        entry_type = int(input)
+        print('System automatically detected your entries type. (' + user_entry + ') is an integer.')
+
+    except ValueError:
+
+        try:
+            #This will check if the type of this input is float.
+            entry_type = float(input)
+            print('System automatically detected your entries type. (' + user_entry + ') is a float.')
+
+        except ValueError:
+
+            #Since the first two did not work, theres only one possibility left.
+            #Type of this input is string.
+
+            print('System automatically detected your entries type. (' + user_entry + ') is a string.')
+
+user_entry = input('Please put an entry. System will detect if its an integer, float or a string. --> ')
+input_type(user_entry)
